@@ -1,7 +1,7 @@
 # random-pokebattle
-Um jogo simples de batalhas pokémon, baseado no projeto "Super Trunfo", da Imersão Dev.
+Um jogo simples de batalhas pokémon, baseado no projeto "Super Trunfo", da Imersão Dev. </br>
 Ainda estou fazendo :]
 
-[URL do Site](https://luizhf42.github.io/random-pokebattle/)
+[URL do Site](https://luizhf42.github.io/random-pokebattle/) </br>
 Em alguns tamanhos de tela é provável que o resultado do layout seja bizarro e faltam alguns recursos no JS, mas com bastante paciência dá pra jogar
 
