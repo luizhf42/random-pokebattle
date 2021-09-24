@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pokemon.css">
+    <title>Random Pokébattle</title>
+</head>
+<body>
+    <header>
+        <h1 class="page-title"><img src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo.png" alt="Logo da franquia Pokémon"></h1>
+        
+        <p class="page-subtitle">Batalhe usando os iniciais de todas as gerações, de forma aleatória!</p>
+    </header>
+
+    <div class="container">
+        <button onclick="sortearPokemon()" id="btnSortear">Sortear carta</button>
+
+        <div id="pokemon-jogador">
+            <div class="img">
+                <img src="" id="pokemon-sprite" alt="">
+            </div>
+    
+            <div class="stats">
+                <h2 id="pokemon-name">a</h2>
+                <label for="atk-btn" id="atk-label"><input type="radio" name="stat" id="atk-btn" checked value="attack"> Attack: </label>
+                <label for="def-btn" id="def-label"><input type="radio" name="stat" id="def-btn" value="defense"> Defense: </label>
+                <label for="spe-btn" id="spe-label"><input type="radio" name="stat" id="spe-btn" value="speed"> Speed: </label>
+            </div>
+        </div>
+
+        <button type="button" id="btnJogar" onclick="jogar()" disabled="true">Jogar</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    height: 100vh;
+    background-image: url(https://telegra.ph/file/00d1845730d7a296525cc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #003030;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 18%;
+    color: #fff;
+    padding-top: 10px;
+    text-align: center;
+}
+
+h1 img {
+    width: 280px;
+}
+
+.page-subtitle {
+    font-size: 1.3em;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    height: 65%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    margin: .5rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+@media screen and (max-height: 674px) {
+    #pokemon-jogador {
+        width: 200px;
+        height: 200px;
+    }
+
+    #pokemon-sprite {
+        width: 105px;
+        height: 95px;
+    }
+}
+
+@media screen and (max-height: 667px) and (max-width: 540px) {
+    body {
+    background-image: url(https://i.pinimg.com/originals/92/6b/31/926b31e66d9bd7b8d81277418109547d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .page-title {
+        width: 300px;
+    }
+
+    .page-subtitle {
+        font-size: .9em;
+    }
+}
+
