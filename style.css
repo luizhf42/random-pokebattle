@@ -13,14 +13,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-color: #003030;
+
 }
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 18%;
+    height: 16%;
     color: #fff;
     padding-top: 10px;
     text-align: center;
@@ -52,19 +52,7 @@ button {
     font-size: 1rem;
 }
 
-@media screen and (max-height: 674px) {
-    #pokemon-jogador {
-        width: 200px;
-        height: 200px;
-    }
-
-    #pokemon-sprite {
-        width: 105px;
-        height: 95px;
-    }
-}
-
-@media screen and (max-height: 667px) and (max-width: 540px) {
+@media screen and (max-height: 667px) and (max-width: 375px) {
     body {
     background-image: url(https://i.pinimg.com/originals/92/6b/31/926b31e66d9bd7b8d81277418109547d.jpg);
     background-repeat: no-repeat;
@@ -73,6 +61,8 @@ button {
     }
 
     header {
+        height: 10%;
+        padding-top: 50px;
         flex-direction: column;
     }
 
@@ -82,6 +72,35 @@ button {
 
     .page-subtitle {
         font-size: .9em;
+    }
+
+    button {
+        padding: 0.6rem 1.2rem;
+        margin: .4rem 0;
+        font-size: .9rem;
+    }
+
+    #pokemon-jogador {
+        width: 185px;
+        height: 185px;
+    }
+
+    #pokemon-sprite {
+        width: 90px;
+        height: 90px;
+    }
+
+    #pokemon-name {
+        font-size: 1.4em;
+    }
+    label {
+        font-size: .8em;
+    }
+
+    #resultado {
+        font-size: .9em;
+        width: 170px;
+        font-weight: 600;
     }
 }
 
