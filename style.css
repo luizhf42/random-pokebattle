@@ -54,7 +54,52 @@ button {
     font-size: 1.2rem;
 }
 
-@media screen and (max-height: 736px) and (max-width: 415px) {
+@media screen and (min-width: 1860px) and (max-height: 984px) {
+    h1 img {
+        width: 430px;
+    }
+
+    .page-subtitle {
+        font-size: 2em;
+    }
+    
+    .container {
+        height: 66%;
+        justify-content: space-around;
+    }
+
+    #pokemon-jogador {
+        width: 385px;
+        height: 385px;
+    }
+
+    #pokemon-sprite {
+        width: 180px;
+        height: 175px;
+    }
+
+    .stats {
+        width: 153px;
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 1.5em;
+        width: 144px;
+        padding: .9em 1.3em;
+    }
+
+    #resultado {
+        font-size: 1.7em;
+        width: 370px;
+    }
+}
+
+@media screen and (max-height: 864px) and (max-width: 415px) {
     body {
     background-image: url(https://i.pinimg.com/originals/92/6b/31/926b31e66d9bd7b8d81277418109547d.jpg);
     background-repeat: no-repeat;
