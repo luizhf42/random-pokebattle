@@ -54,7 +54,47 @@ button {
     font-size: 1.2rem;
 }
 
-@media screen and (min-width: 1860px) and (max-height: 984px) {
+#pokemon-jogador {
+    border-radius: 50%;
+    display: flex;
+    width: 275px;
+    height: 275px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#pokemon-sprite {
+    width: 150px;
+    height: 140px;
+}
+
+.stats {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+#resultado {
+    font-size: 1.1em;
+    width: 250px;
+    font-weight: 600;
+}
+
+#btn-reiniciar {
+    color: #fff;
+    background-color: #B10019;
+    width: auto;
+    position: absolute;
+    transform: translateY(90px);
+    visibility: hidden;
+}
+
+@media screen and (min-width: 1860px) and (min-height: 984px) {
     h1 img {
         width: 430px;
     }
@@ -96,6 +136,10 @@ button {
     #resultado {
         font-size: 1.7em;
         width: 370px;
+    }
+
+    #btn-reiniciar {
+        transform: translateY(120px);
     }
 }
 
@@ -147,6 +191,7 @@ button {
     #pokemon-name {
         font-size: 1.4em;
     }
+
     label {
         font-size: .8em;
     }
@@ -155,6 +200,10 @@ button {
         font-size: .9em;
         width: 170px;
         font-weight: 600;
+    }
+
+    #btn-reiniciar {
+        transform: translateY(75px);
     }
 }
 

@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pokemon.css">
     <link rel="stylesheet" href="style.css">
     <title>Random Pokébattle</title>
 </head>
-<body>
+<body onload="adicionaPokemon()">
     <header>
         <h1 class="page-title"><img src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo.png" alt="Logo da franquia Pokémon"></h1>
         
@@ -16,7 +15,7 @@
     </header>
 
     <div class="container">
-        <button onclick="sortearPokemon()" id="btnSortear">Sortear</button>
+        <button onclick="sortearPokemon()" id="btn-sortear">Sortear</button>
 
         <div id="pokemon-jogador">
             <div class="img">
@@ -31,7 +30,8 @@
             </div>
         </div>
 
-        <button type="button" id="btnJogar" onclick="jogar()" disabled="true">Jogar</button>
+        <button type="button" id="btn-reiniciar" onclick="reiniciar()">Reiniciar</button>
+        <button type="button" id="btn-jogar" onclick="jogar()" disabled="true">Jogar</button>
     </div>
     
     <script src="script.js"></script>
