@@ -1,7 +1,41 @@
-# random-pokebattle
-Um jogo simples de batalhas pokémon, baseado no projeto "Super Trunfo", da Imersão Dev. </br>
-Ainda faltam algumas coisas, mas dá pra jogar :>
+# Random Pokébattle - Imersão Dev
 
-[URL do Site](https://luizhf42.github.io/random-pokebattle/) </br>
-Em alguns tamanhos de tela é provável que o resultado do layout seja bizarro e faltam alguns recursos no JS, mas já é um site utilizável
+Um minigame de "batalhas" pokémon aleatórias, baseado no Super Trunfo da Imersão Dev.
 
+## Conteúdos
+
+- [Overview](#overview)
+  - [O projeto](#o-projeto)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [Processo](#processo)
+  - [Feito com](#feito-com)
+
+- [Autor](#autor)
+
+## Overview
+
+### O projeto
+
+- Como dito, este é um projeto baseado no Super Trunfo. A proposta da escolha aleatória de personagem e uso de atributos permaneceu, porém, quase todo o restante tem uma cara mais minha.
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- [URL do Site](https://luizhf42.github.io/random-pokebattle)
+
+## Processo
+
+### Feito com
+
+- HTML5
+- CSS3
+- Flexbox
+- JavaScript
+
+## Autor
+
+- Propriamente eu, Luiz Henrique.
