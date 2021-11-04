@@ -255,6 +255,7 @@ function adicionaPokemon() {
     var pokemonJogador;
     var numeroPokemonCPU;
     var numeroPokemonJogador;
+    var vitorias = 0, empates = 0, derrotas = 0;
     
     function sortearPokemon() {
         if (document.getElementById("pokemon-jogador") != divPokemonConteudo) {
@@ -274,11 +275,7 @@ function adicionaPokemon() {
         if (pokemon.length > 0) {
             mostrarPokemon(pokemonJogador);
         } else {
-            document.getElementById("pokemon-jogador").innerHTML = `<p id="resultado">Todos os pokémon já foram utilizados. Caso queira jogar novamente, aperte o botão!</p>`
-            document.getElementById("btn-sortear").style.visibility = "hidden";
-            document.getElementById("btn-jogar").style.visibility = "hidden";
-            document.getElementById("btn-reiniciar").style.visibility = "visible";
-            
+            mostraResultados();
         }
     }
     
@@ -304,10 +301,13 @@ function adicionaPokemon() {
         
         if (valorPokemonJogador > valorPokemonCPU) {
             elementoResultado.innerHTML = `<p id="resultado">Você venceu a rodada! Seu ${pokemonJogador.nome}, com ${valorPokemonJogador} de ${statSelecionado}, derrotou o ${pokemonCPU.nome} do adversário!</p>`;
+            vitorias++;
         } else if (valorPokemonCPU > valorPokemonJogador) {
             elementoResultado.innerHTML = `<p id="resultado">Você perdeu o round! Seu ${pokemonJogador.nome}, com ${valorPokemonJogador} de ${statSelecionado}, foi derrotado pelo ${pokemonCPU.nome} do adversário!</p>`;
+            derrotas++;
         } else {
             elementoResultado.innerHTML = `<p id="resultado">Empate! Seu ${pokemonJogador.nome} e o ${pokemonCPU.nome} do adversário empataram em ${statSelecionado}, com ${valorPokemonJogador} pontos!</p>`;
+            empates++;
         }
         
         pokemon.splice(numeroPokemonJogador, 1);
@@ -318,6 +318,7 @@ function adicionaPokemon() {
     
     function reiniciar() {
         adicionaPokemon();
+        vitorias = 0, derrotas = 0, empates = 0;
         document.getElementById("btn-sortear").disabled = false;
         document.getElementById("btn-jogar").disabled = true;
         document.getElementById("btn-sortear").style.visibility = "visible";
@@ -325,4 +326,17 @@ function adicionaPokemon() {
         document.getElementById("btn-reiniciar").style.visibility = "hidden";
         document.getElementById("pokemon-jogador").innerHTML = divPokemonConteudo;
         document.getElementById("pokemon-jogador").style.visibility = "hidden";
+    }
+    
+    function mostraResultados() {
+        if (vitorias > derrotas) {
+            document.getElementById("pokemon-jogador").innerHTML = `<p id="resultado">Você venceu! Ao final, você teve ${vitorias} vitórias, ${empates} empates e ${derrotas} derrotas. Parabéns!</p>`
+        } else if (derrotas > vitorias) {
+            document.getElementById("pokemon-jogador").innerHTML = `<p id="resultado">Você foi derrotado... A máquina te superou ${derrotas} vezes, enquanto você venceu apenas ${vitorias} rounds. Também houveram ${empates} empates.</p>`
+        } else if (derrotas === vitorias) {
+            document.getElementById("pokemon-jogador").innerHTML = `<p id="resultado">Empate! Você e a máquina obtiveram ${vitorias} vitórias cada, portanto, não houve vencedor! Também tivemos ${empates} rounds empatados.</p>`
+        }
+        document.getElementById("btn-sortear").style.visibility = "hidden";
+        document.getElementById("btn-jogar").style.visibility = "hidden";
+        document.getElementById("btn-reiniciar").style.visibility = "visible";
     }
